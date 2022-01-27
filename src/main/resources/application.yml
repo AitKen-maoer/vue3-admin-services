@@ -1,0 +1,39 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: vue3-admin-services
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl_auto: update
+    show_sql: true
+
+jwt:
+  # token有效时长，7天，单位秒
+  expire: 604800
+  # 加密秘钥
+  secret: bvobno4b8s6g4b4rstbtshr
+  tokenHead: Bearer
+  tokenHeader: Authorization
+
+#secure:
+#  ignored:
+#    urls: #安全路径白名单
+#      - /swagger-ui.html
+#      - /swagger-resources/**
+#      - /swagger/**
+#      - /**/v2/api-docs
+#      - /**/*.js
+#      - /**/*.css
+#      - /**/*.png
+#      - /**/*.ico
+#      - /webjars/springfox-swagger-ui/**
+#      - /actuator/**
+#      - /druid/**
+#      - /admin/login
+#      - /admin/register
+#      - /admin/info
+#      - /admin/logout
